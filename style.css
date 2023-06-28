@@ -24,6 +24,7 @@ h1 {
   font-size: 1.5rem;
 }
 
+/* main container */
 main {
   display: grid;
   max-width: 40rem;
@@ -76,6 +77,8 @@ header p {
   line-height: 2rem;
 }
 
+
+/* collection of elements with same property */
 h3,
 button,
 .subscription h1,
