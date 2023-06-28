@@ -1,14 +1,13 @@
 :root {
   --header-color: hsl(179, 62%, 43%);
   --header-background: hsl(0, 0%, 100%);
-  --why-color: hsl(179, 47%, 52%);
+  --about-color: hsl(179, 47%, 52%);
   --button-color: hsl(71, 73%, 54%);
   --paragraph-color: hsl(204, 43%, 93%);
   --paragraph-color-dark: hsl(218, 22%, 67%);
 }
 
 body {
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100svh;
@@ -47,10 +46,19 @@ button {
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 0.3rem 0.3rem hsla(0, 0%, 0%, 0.15);
+  cursor: pointer;
+  transition: transform 100ms;
+}
+
+button:hover {
+  outline: 0.2rem solid var(--paragraph-color);
+}
+
+button:active {
+  transform: scale(0.97);
 }
 
 .subscription {
-  display: flex;
   flex-direction: column;
   background: var(--header-color);
   border-radius: 0 0 0 1rem;
@@ -58,13 +66,12 @@ button {
 }
 
 .price {
-  display: flex;
   align-items: center;
   gap: 1rem;
 }
 
 .about {
-  background: var(--why-color);
+  background: var(--about-color);
   border-radius: 0 0 1rem 0;
 }
 
@@ -78,6 +85,13 @@ header p {
 }
 
 /* collection of elements with same property */
+
+body,
+.subscription,
+.price {
+  display: flex;
+}
+
 h3,
 button,
 .subscription h1,
